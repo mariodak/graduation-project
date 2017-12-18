@@ -1,3 +1,5 @@
+'use strict';
+
 // Main JS File
 
 // Menu Toggle
