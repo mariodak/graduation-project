@@ -1,8 +1,23 @@
-.mobile-nav
-    .mobile-nav-button
-        a(class="mobile-link-show" href="#" id="button")
-    .mobile-nav-show
-        a(class="mobile-link" href="#") Úvod
-        a(class="mobile-link" href="#") O mne
-        a(class="mobile-link" href="#") Galéria
-        a(class="mobile-link" href="#") Kontakt
+// Included menu from navigation.pug
+
+a(id="active" class="btn" href="#")
+    .navigation-button
+        img(src="assets/icon/icon-home.svg")
+.navigation(id="myDiv")
+    a(id="nav-buttons" href="#")
+        a(id="nav-button-1" href="index.html")
+            .nav-col-1.nav-cols
+                .nav-image-1.nav-images
+                p(class="p-hover") Úvod
+        a(id="nav-button-2" href="about.html")
+            .nav-col-2.nav-cols
+                .nav-image-2.nav-images
+                p(class="p-hover") O mne
+        a(id="nav-button-31" href="gallery.html")
+            .nav-col-3.nav-cols
+                .nav-image-3.nav-images
+                p(class="p-hover") Galéria
+        a(id="nav-button-4" href="contact.html")
+            .nav-col-4.nav-cols
+                .nav-image-4.nav-images
+                p(class="p-hover") Kontakt

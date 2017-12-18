@@ -12,21 +12,12 @@ html(lang="sk")
             img(src="assets/img/menu-1.jpg")
 
         header
-            a(id="active" href="#")
-                .navigation-button
-                    p x
-        .navigation(id="myDiv")
-            a(id="nav-buttons" href="#")
-                a(id="nav-button-1" href="index.html")
-                    .nav-col-1.nav-cols Úvod
-                a(id="nav-button-2" href="about.html")
-                    .nav-col-2.nav-cols O mne
-                a(id="nav-button-31" href="gallery.html")
-                    .nav-col-3.nav-cols Galéria
-                a(id="nav-button-4" href="contact.html")
-                    .nav-col-4.nav-cols Kontakt
 
-            
+        // Included Menu
+        include assets/lib/navigation.pug
+        // & Included Menu
+        section
+            p Welcome
 
 
         // Scripts

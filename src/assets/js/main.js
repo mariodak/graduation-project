@@ -1,9 +1,49 @@
 // Main JS File
 
-// Menu Toggle
-//$('#button').click(() => $('.mobile-nav-show').toggleClass('active-button'))
 
+// Menu Toggle
 
 $('#active').click(function () {
     $('.navigation').toggleClass("navigation-after", 1000, "easeOutSine");
 });
+
+// Menu Button Click
+$('a.btn').click(function () {
+    $('.navigation-button').toggleClass("button-activate", 1000, "easeOutSine");
+});
+
+// Menu Background Hover
+
+var m_b_h = ('menu-bg-hover')
+
+$(function () {
+    $('.nav-col-1').hover(function () {
+        $('.nav-image-1').addClass(m_b_h);
+    }, function () {
+        $('.nav-image-1').removeClass(m_b_h);
+    })
+})
+
+$(function () {
+    $('.nav-col-2').hover(function () {
+        $('.nav-image-2').addClass(m_b_h);
+    }, function () {
+        $('.nav-image-2').removeClass(m_b_h);
+    })
+})
+
+$(function () {
+    $('.nav-col-3').hover(function () {
+        $('.nav-image-3').addClass(m_b_h);
+    }, function () {
+        $('.nav-image-3').removeClass(m_b_h);
+    })
+})
+
+$(function () {
+    $('.nav-col-4').hover(function () {
+        $('.nav-image-4').addClass(m_b_h);
+    }, function () {
+        $('.nav-image-4').removeClass(m_b_h);
+    })
+})
