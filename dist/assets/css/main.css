@@ -98,24 +98,146 @@ a .button-activate {
   transform: scale(1.2) !important;
   opacity: 1 !important; }
 
+@font-face {
+  font-family: 'Courgette';
+  src: url("../fonts/Courgette-Regular.ttf"); }
+
 *, *:after, *:before {
   box-sizing: border-box;
   text-decoration: none;
-  font-family: 'Raleway', sans-serif; }
+  font-family: 'Raleway', sans-serif;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em; }
 
 body {
   margin: 0;
   background: #ffffff; }
 
-.bg-img {
-  width: 100%;
-  height: auto;
-  position: absolute;
-  z-index: -999; }
-  .bg-img img {
-    width: 100%;
-    height: auto; }
-
 header {
   width: 100%;
-  height: 200px; }
+  height: 50vh;
+  min-height: 100%;
+  background-image: url("../img/menu-2.jpg");
+  background-size: cover;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; }
+  header .title-box {
+    width: 500px;
+    height: 200px;
+    position: relative;
+    background-color: white;
+    bottom: -100px;
+    border-bottom: 8px solid #616161;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #616161; }
+    header .title-box p {
+      color: #616161; }
+      header .title-box p .lom {
+        font-size: 70px; }
+      header .title-box p .title {
+        font-size: 30px; }
+
+section {
+  width: 90%;
+  max-width: 1600px;
+  min-height: 500px;
+  margin: 0 auto;
+  padding-top: 200px;
+  padding-bottom: 100px; }
+  section .about {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-flow: row wrap; }
+    section .about .img-1, section .about .img-3, section .about .txt-2, section .about .txt-4 {
+      left: 20%;
+      transform: translateX(-20%); }
+    section .about .img-2, section .about .img-4, section .about .txt-1, section .about .txt-3 {
+      right: 0%;
+      transform: translateX(-20%); }
+    @media (max-width: 800px) {
+      section .about {
+        flex-flow: column; }
+        section .about .img-1 {
+          order: 1; }
+        section .about .txt-1 {
+          order: 2; }
+        section .about .img-2 {
+          order: 3; }
+        section .about .txt-2 {
+          order: 4; }
+        section .about .img-3 {
+          order: 5; }
+        section .about .txt-3 {
+          order: 6; }
+        section .about .img-4 {
+          order: 7; }
+        section .about .txt-4 {
+          order: 8; }
+        section .about .img-1, section .about .txt-2, section .about .img-3, section .about .txt-4 {
+          left: 0%;
+          transform: translateX(0%); }
+        section .about .img-2, section .about .txt-3, section .about .img-4, section .about .txt-3 {
+          right: 0%;
+          transform: translateX(0%); } }
+    section .about .txt-1, section .about .txt-2, section .about .txt-3, section .about .txt-4 {
+      z-index: 4; }
+    section .about .text-p {
+      position: absolute;
+      width: 100%;
+      min-height: 100px;
+      color: #5f5f5f;
+      padding: 20px;
+      text-align: justify;
+      line-height: 22px;
+      font-size: 14px;
+      background: #e6e6e6; }
+      @media (min-width: 800px) {
+        section .about .text-p {
+          bottom: 0; } }
+    section .about .img-box {
+      width: 50%;
+      height: 400px;
+      position: relative; }
+      @media (max-width: 800px) {
+        section .about .img-box {
+          width: 100%;
+          height: 250px; } }
+    section .about .text-box {
+      width: 50%;
+      height: 400px;
+      position: relative; }
+      @media (max-width: 800px) {
+        section .about .text-box {
+          width: 90%;
+          height: 150px;
+          margin-top: -50px auto 0px auto; } }
+    section .about .img-1 {
+      background-image: url("../img/about/img-1.jpg");
+      background-size: cover;
+      margin-top: 100px; }
+    section .about .img-2 {
+      background-image: url("../img/about/img-2.jpg");
+      background-size: cover;
+      margin-top: 100px; }
+    section .about .img-3 {
+      background-image: url("../img/about/img-3.jpg");
+      background-size: cover;
+      margin-top: 100px; }
+    section .about .img-4 {
+      background-image: url("../img/about/img-4.jpg");
+      background-size: cover;
+      margin-top: 100px; }
+
+footer {
+  width: 90%;
+  max-width: 1600px;
+  min-height: 600px;
+  border-top: 8px solid #616161;
+  margin: 100px auto 0px auto; }

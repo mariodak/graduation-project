@@ -2,25 +2,149 @@
 @import '../lib/mixins.sass'
 @import '../lib/menu.sass'
 
+@font-face
+    font-family: 'Courgette'
+    src: url('../fonts/Courgette-Regular.ttf')
+
 *, *:after, *:before
     box-sizing: border-box
     text-decoration: none
     font-family: 'Raleway', sans-serif
+    -webkit-margin-before: 0em
+    -webkit-margin-after: 0em
 body
   margin: 0
   background: #ffffff
 
-.bg-img
-
-    width: 100%
-    height: auto
-    position: absolute
-    z-index: -999
-    img
-        width: 100%
-        height: auto
-
 header
-
     width: 100%
-    height: 200px
+    height: 50vh
+    min-height: 100%
+    background-image: url('../img/menu-2.jpg')
+    background-size: cover
+    position: relative
+    margin: 0 auto
+    display: flex
+    justify-content: center
+    align-items: flex-end
+    .title-box
+        width: 500px
+        height: 200px
+        position: relative
+        background-color: white
+        bottom: -100px
+        border-bottom: 8px solid #616161
+        padding: 20px
+        display: flex
+        justify-content: center
+        align-items: center
+        color: #616161
+        p
+            color: #616161
+            .lom
+                font-size: 70px
+            .title
+                font-size: 30px
+
+section
+    width: 90%
+    max-width: 1600px
+    min-height: 500px
+    margin: 0 auto
+    padding-top: 200px
+    padding-bottom: 100px
+    .about
+        width: 100%
+        min-height: 500px
+        display: flex
+        flex-flow: row wrap
+        .img-1, .img-3, .txt-2, .txt-4
+            left: 20%
+            transform: translateX(-20%)
+        .img-2, .img-4, .txt-1, .txt-3
+            right: 0%
+            transform: translateX(-20%)
+        +max(800px)
+            flex-flow: column
+            .img-1
+                order: 1
+            .txt-1
+                order: 2
+            .img-2
+                order: 3
+            .txt-2
+                order: 4
+            .img-3
+                order: 5
+            .txt-3
+                order: 6
+            .img-4
+                order: 7
+            .txt-4
+                order: 8
+            .img-1, .txt-2, .img-3, .txt-4
+                left: 0%
+                transform: translateX(0%)
+            .img-2, .txt-3, .img-4, .txt-3
+                right: 0%
+                transform: translateX(0%)
+            
+        .txt-1, .txt-2, .txt-3, .txt-4
+            z-index: 4
+        .text-p
+            position: absolute
+            width: 100%
+            min-height: 100px
+            color: #5f5f5f
+            padding: 20px
+            text-align: justify
+            line-height: 22px
+            font-size: 14px
+            background: #e6e6e6
+            +min(800px)
+                bottom: 0
+        .img-box
+            width: 50%
+            height: 400px
+            position: relative
+            +max(800px)
+                width: 100%
+                height: 250px
+        .text-box
+            width: 50%
+            height: 400px
+            position: relative
+            +max(800px)
+                width: 90%
+                height: 150px
+                margin-top: -50px auto 0px auto
+        .img-1
+            background-image: url('../img/about/img-1.jpg')
+            background-size: cover
+            margin-top: 100px
+        .img-2
+            background-image: url('../img/about/img-2.jpg')
+            background-size: cover
+            margin-top: 100px
+        .img-3
+            background-image: url('../img/about/img-3.jpg')
+            background-size: cover
+            margin-top: 100px
+        .img-4
+            background-image: url('../img/about/img-4.jpg')
+            background-size: cover
+            margin-top: 100px
+        
+
+
+
+
+
+
+// Footer
+footer
+    width: 90%
+    max-width: 1600px
+    min-height: 600px
+    border-top: 8px solid #616161
+    margin: 100px auto 0px auto

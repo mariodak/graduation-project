@@ -8,16 +8,32 @@ html(lang="sk")
         link(href="assets/css/main.css", rel="stylesheet")
         <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,700" rel="stylesheet">
     body
-        .bg-img
-            img(src="assets/img/menu-3.jpg")
-
-        header
-
         // Included Menu
         include assets/lib/navigation.pug
         // & Included Menu
+
+        header
+            .title-box
+                p <b class="lom">/<b/><b class="title">O mne</b>
         section
-            p Welcome
+            .about
+                .img-box.img-1
+                .text-box.txt-1
+                    .text-p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae accusamus consequatur tenetur minima laboriosam aliquid maiores porro id repellendus adipisci earum sapiente, atque ex sequi maxime nulla labore rem tempora!
+                .text-box.txt-2
+                    .text-p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae accusamus consequatur tenetur minima laboriosam aliquid maiores porro id repellendus adipisci earum sapiente, atque ex sequi maxime nulla labore rem tempora!
+                .img-box.img-2
+                .img-box.img-3
+                .text-box.txt-3
+                    .text-p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae accusamus consequatur tenetur minima laboriosam aliquid maiores porro id repellendus adipisci earum sapiente, atque ex sequi maxime nulla labore rem tempora!
+                .text-box.txt-4
+                    .text-p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae accusamus consequatur tenetur minima laboriosam aliquid maiores porro id repellendus adipisci earum sapiente, atque ex sequi maxime nulla labore rem tempora!
+                .img-box.img-4
+                
+
+        // Included Footer
+        include assets/lib/footer.pug
+        // & Included Footer
 
 
         // Scripts
