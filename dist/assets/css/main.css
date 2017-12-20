@@ -116,7 +116,7 @@ body {
 header {
   width: 100%;
   height: 50vh;
-  min-height: 100%;
+  max-height: 600px;
   background-image: url("../img/menu-2.jpg");
   background-size: cover;
   position: relative;
@@ -125,17 +125,21 @@ header {
   justify-content: center;
   align-items: flex-end; }
   header .title-box {
-    width: 500px;
+    width: 450px;
     height: 200px;
     position: relative;
     background-color: white;
-    bottom: -100px;
+    transform: translateY(100px);
     border-bottom: 8px solid #616161;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #616161; }
+    @media (max-width: 800px) {
+      header .title-box {
+        width: 90%;
+        transform: translateY(100px); } }
     header .title-box p {
       color: #616161; }
       header .title-box p .lom {
@@ -148,19 +152,21 @@ section {
   max-width: 1600px;
   min-height: 500px;
   margin: 0 auto;
-  padding-top: 200px;
+  padding-top: 100px;
   padding-bottom: 100px; }
   section .about {
     width: 100%;
     min-height: 500px;
     display: flex;
     flex-flow: row wrap; }
-    section .about .img-1, section .about .img-3, section .about .txt-2, section .about .txt-4 {
-      left: 20%;
+    section .about .img-1, section .about .img-3 {
+      transform: translateX(20%); }
+    section .about .txt-2, section .about .txt-4 {
+      transform: translateX(40%); }
+    section .about .img-2, section .about .img-4 {
       transform: translateX(-20%); }
-    section .about .img-2, section .about .img-4, section .about .txt-1, section .about .txt-3 {
-      right: 0%;
-      transform: translateX(-20%); }
+    section .about .txt-1, section .about .txt-3 {
+      transform: translateX(-40%); }
     @media (max-width: 800px) {
       section .about {
         flex-flow: column; }
@@ -180,11 +186,13 @@ section {
           order: 7; }
         section .about .txt-4 {
           order: 8; }
-        section .about .img-1, section .about .txt-2, section .about .img-3, section .about .txt-4 {
-          left: 0%;
+        section .about .img-1, section .about .img-3 {
           transform: translateX(0%); }
-        section .about .img-2, section .about .txt-3, section .about .img-4, section .about .txt-3 {
-          right: 0%;
+        section .about .txt-2, section .about .txt-4 {
+          transform: translateX(0%); }
+        section .about .img-2, section .about .img-4 {
+          transform: translateX(0%); }
+        section .about .txt-1, section .about .txt-3 {
           transform: translateX(0%); } }
     section .about .txt-1, section .about .txt-2, section .about .txt-3, section .about .txt-4 {
       z-index: 4; }
@@ -210,14 +218,15 @@ section {
           width: 100%;
           height: 250px; } }
     section .about .text-box {
-      width: 50%;
+      width: 40%;
       height: 400px;
       position: relative; }
       @media (max-width: 800px) {
         section .about .text-box {
           width: 90%;
           height: 150px;
-          margin-top: -50px auto 0px auto; } }
+          margin: auto;
+          transform: translateY(-50px); } }
     section .about .img-1 {
       background-image: url("../img/about/img-1.jpg");
       background-size: cover;
@@ -234,6 +243,9 @@ section {
       background-image: url("../img/about/img-4.jpg");
       background-size: cover;
       margin-top: 100px; }
+
+.redcolor {
+  color: red !important; }
 
 footer {
   width: 90%;

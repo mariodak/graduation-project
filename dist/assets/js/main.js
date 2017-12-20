@@ -53,3 +53,18 @@ $(function () {
         $('.nav-image-4').removeClass(m_b_h);
     });
 });
+
+// Add function scroll
+
+jQuery(document).ready(function () {
+
+    var x = 0;
+
+    //Initialise ScrollAppear
+    jQuery('.about').ScrollAppear({
+        ElementAffect: ".text-p",
+        // ElementsToShow: 5,
+        AddClass: 'redcolor'
+        // Timeout: 0
+    });
+});
