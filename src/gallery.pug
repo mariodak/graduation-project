@@ -8,17 +8,44 @@ html(lang="sk")
         link(href="assets/css/main.css", rel="stylesheet")
         <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,700" rel="stylesheet">
     body
-        .bg-img
-            img(src="assets/img/menu-3.jpg")
-
-        header
 
         // Included Menu
         include assets/lib/navigation.pug
         // & Included Menu
-        section
-            p Welcome
+        .bg-fixed.gallery
+        header.page-3
+            .title-box
+                img.title(src="assets/icon/gallery.png")
+                //p <b class="lom">/<b/><b class="title">Galéria</b>
 
+        section
+            .gallery
+                .photo-box
+                    img.photo(src="assets/img/menu-4.jpg")
+                .photo-box
+                    img.photo(src="assets/img/menu-4.jpg")
+                .photo-box
+                    img.photo(src="assets/img/menu-4.jpg")
+                .photo-box
+                    img.photo(src="assets/img/menu-4.jpg")
+                .photo-box
+                    img.photo(src="assets/img/menu-4.jpg")
+                .photo-box
+                    img.photo(src="assets/img/menu-4.jpg")
+                .photo-box
+                    img.photo(src="assets/img/menu-4.jpg")
+                .photo-box
+                    img.photo(src="assets/img/menu-4.jpg")
+                .photo-box
+                    img.photo(src="assets/img/menu-4.jpg")
+                .photo-box
+                    img.photo(src="assets/img/menu-4.jpg")
+                
+                
+
+        // Included Footer
+        include assets/lib/footer.pug
+        // & Included Footer
 
         // Scripts
         script(src="assets/js/jquery-3.2.1.min.js")

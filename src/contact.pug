@@ -8,17 +8,31 @@ html(lang="sk")
         link(href="assets/css/main.css", rel="stylesheet")
         <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,700" rel="stylesheet">
     body
-        .bg-img
-            img(src="assets/img/menu-4.jpg")
-
-        header
-
+    
         // Included Menu
         include assets/lib/navigation.pug
         // & Included Menu
-        section
-            p Welcome
+        .bg-fixed.contact
+        header.page-4
+            a.facebook(href="https://www.facebook.com/ofmarioo") @Facebook
+            a.insta(href="https://www.instagram.com/ofmarioo/") @Instagram
+            a.email(href="mailto:e.mariodak@gmail.com") @Email
+            
+            h4 &copy Mário Ďak 2017
 
+            .title-box
+                img.title(src="assets/icon/contact.png")
+                    
+        //section
+            .contact
+                .social-links
+
+                
+
+
+        // Included Footer
+        // include assets/lib/footer.pug
+        // & Included Footer
 
         // Scripts
         script(src="assets/js/jquery-3.2.1.min.js")

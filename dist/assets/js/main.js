@@ -59,16 +59,23 @@ $(function () {
 
 // Aktivuje effekt po scrollnutí --px
 
-$(window).scroll(function () {
+var objects = $('.object');
+function scrollAnimation() {
 
-    var divisionObject = '--object';
-    var classApply = '--apply';
     var scroll = $(window).scrollTop();
-    var calcHeight = $(window).height() - 300;
-    var totalDistance = $(divisionObject).offset().top - calcHeight;
 
-    if (scroll >= totalDistance) $(divisionObject).addClass(classApply);
+    objects.each(function (index, object) {
+        var calcHeight = $(window).height() - $(object).height();
+        var totalDistance = $(object).offset().top - calcHeight;
 
-    // Remove this 2 lines, if you want apply this Animation once time
-    else $(divisionObject).removeClass(classApply);
+        if (scroll >= totalDistance) $(object).addClass('apply');else $(object).removeClass('apply');
+    });
+}
+scrollAnimation();
+$(window).scroll(scrollAnimation);
+
+// Image Open Fullscreen
+
+$('#view').click(function () {
+    $('section.gallery.photo-box.img-photo').toggleClass("section.gallery.photo-box.img-view", 1000, "easeOutSine");
 });

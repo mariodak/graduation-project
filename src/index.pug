@@ -8,17 +8,14 @@ html(lang="sk")
         link(href="assets/css/main.css", rel="stylesheet")
         <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,700" rel="stylesheet">
     body
-        .bg-img
-            img(src="assets/img/menu-1.jpg")
-
-        header
 
         // Included Menu
         include assets/lib/navigation.pug
         // & Included Menu
-        section
-            p Welcome
-
+        
+        header.page-1
+            .title-box
+                img.title(src="assets/icon/intro.png")
 
         // Scripts
         script(src="assets/js/jquery-3.2.1.min.js")

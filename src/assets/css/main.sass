@@ -6,6 +6,12 @@
     font-family: 'Courgette'
     src: url('../fonts/Courgette-Regular.ttf')
 
+@font-face
+    font-family: 'DryBrush'
+    src: url('../fonts/DryBrush.ttf')
+
+
+
 *, *:after, *:before
     box-sizing: border-box
     text-decoration: none
@@ -16,32 +22,54 @@ body
   margin: 0
   background: #ffffff
 
+.bg-fixed
+    width: 100%
+    height: 100%
+    min-height: 100%
+    position: fixed
+    z-index: -1
+    &.about
+        background-image: url('../img/bg-fixed.jpg')
+        background-size: cover
+    &.gallery
+        background-image: url('../img/bg-fixed.jpg')
+        background-size: cover
+    &.contact
+        background-image: url('../img/bg-fixed.jpg')
+        background-size: cover
 header
     width: 100%
-    height: 50vh
-    max-height: 600px
-    background-image: url('../img/menu-2.jpg')
-    background-size: cover
+    height: 100vh
     position: relative
-    margin: 0 auto
     display: flex
     justify-content: center
-    align-items: flex-end
+    align-items: center
+    &.page-1
+        background-image: url('../img/menu-1.jpg')
+        background-size: cover
+    &.page-2
+        background-image: url('../img/menu-2.jpg')
+        background-size: cover
+    &.page-3
+        background-image: url('../img/menu-3.jpg')
+        background-size: cover
+    &.page-4
+        background-image: url('../img/menu-4.jpg')
+        background-size: cover
+        flex-direction: column
+    
+
     .title-box
         width: 450px
         height: 200px
         position: relative
-        background-color: white
-        transform: translateY(100px)
-        border-bottom: 8px solid #616161
-        padding: 20px
         display: flex
         justify-content: center
         align-items: center
-        color: #616161
+        .title
+            width: 100%
         +max(800px)
             width: 90%
-            transform: translateY(100px)
         p
             color: #616161
             .lom
@@ -55,7 +83,7 @@ section
     min-height: 500px
     margin: 0 auto
     padding-top: 100px
-    padding-bottom: 100px
+    padding-bottom: 50px
     .about
         width: 100%
         min-height: 500px
@@ -97,7 +125,7 @@ section
                 transform: translateX(0%) // right text divs
             
         .txt-1, .txt-2, .txt-3, .txt-4
-            z-index: 4
+            z-index: 10
         .text-p
             position: absolute
             width: 100%
@@ -108,18 +136,15 @@ section
             line-height: 22px
             font-size: 14px
             background: #e6e6e6
+            transition: .5s opacity ease-in
             +min(800px)
                 bottom: 0
-            --object
-            --apply
-                color: red
-            &:Object
-            &:applyClass
-                color: red
+            
         .img-box
             width: 50%
             height: 400px
             position: relative
+            box-shadow:  0px 15px 59px -8px rgba(0,0,0,0.75)
             +max(800px)
                 width: 100%
                 height: 250px
@@ -148,21 +173,56 @@ section
             background-image: url('../img/about/img-4.jpg')
             background-size: cover
             margin-top: 100px
-        
+    .gallery
+        width: 100%
+        min-height: 500px
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        .photo-box
+            min-width: 0
+            margin: 5px
+            img.photo
+                width: 400px
+                max-width: 100%
+                max-height: 450px
 
-
-
-.apply-1
-    color: red !important
-
-.apply-2
-    color: red !important
+.page-4
+    a
+        color: #1e282a
+        text-transform: capitalize
+        letter-spacing: 3px
+        font-weight: 400
+        transition: .1s all ease-in-out
+        &:hover
+            color: #5c74a9
+            letter-spacing: 4px
+        &.insta
+            margin: 10px 0
+            font-size: 30px
+    h4
+        position: absolute
+        bottom: 0
+        left: 0
+        margin-bottom: 20px
+        margin-left: 20px
+        color: white
+        font-weight: 400
+        letter-spacing: 2px
+        font-size: 12px
 
 
 // Footer
 footer
     width: 90%
     max-width: 1600px
-    min-height: 600px
-    border-top: 8px solid #616161
+    min-height: 100px
+    border-top: 1px solid white
     margin: 100px auto 0px auto
+    h1
+        text-align: center
+        margin: 50px auto
+        color: white
+        font-size: 1em
+        text-transform: uppercase
+
