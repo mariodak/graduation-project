@@ -209,6 +209,10 @@ section {
       @media (min-width: 800px) {
         section .about .text-p {
           bottom: 0; } }
+      section .about .text-p --apply {
+        color: red; }
+      section .about .text-p:applyClass {
+        color: red; }
     section .about .img-box {
       width: 50%;
       height: 400px;
@@ -244,7 +248,10 @@ section {
       background-size: cover;
       margin-top: 100px; }
 
-.redcolor {
+.apply-1 {
+  color: red !important; }
+
+.apply-2 {
   color: red !important; }
 
 footer {

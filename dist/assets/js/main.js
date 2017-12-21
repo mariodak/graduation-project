@@ -1,12 +1,15 @@
 'use strict';
 
 // Main JS File
+
+// Blokuje Zoom na prehliadačoch
 document.addEventListener('touchmove', function (event) {
     event = event.originalEvent || event;
     if (event.scale !== 1) {
         event.preventDefault();
     }
 }, false);
+
 // Menu Toggle
 
 $('#active').click(function () {
@@ -18,7 +21,7 @@ $('a.btn').click(function () {
     $('.navigation-button').toggleClass("button-activate", 1000, "easeOutSine");
 });
 
-// Menu Background Hover
+// Menu Zoom Pozadia
 
 var m_b_h = 'menu-bg-hover';
 
@@ -54,17 +57,18 @@ $(function () {
     });
 });
 
-// Add function scroll
+// Aktivuje effekt po scrollnutí --px
 
-jQuery(document).ready(function () {
+$(window).scroll(function () {
 
-    var x = 0;
+    var divisionObject = '--object';
+    var classApply = '--apply';
+    var scroll = $(window).scrollTop();
+    var calcHeight = $(window).height() - 300;
+    var totalDistance = $(divisionObject).offset().top - calcHeight;
 
-    //Initialise ScrollAppear
-    jQuery('.about').ScrollAppear({
-        ElementAffect: ".text-p",
-        // ElementsToShow: 5,
-        AddClass: 'redcolor'
-        // Timeout: 0
-    });
+    if (scroll >= totalDistance) $(divisionObject).addClass(classApply);
+
+    // Remove this 2 lines, if you want apply this Animation once time
+    else $(divisionObject).removeClass(classApply);
 });
